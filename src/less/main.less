@@ -1,0 +1,510 @@
+@keyframes increase {
+	0% {
+		font-size: 10px;
+	}
+	100% {
+		font-size: 40px;
+	}
+}
+
+@keyframes stretching {
+	0% {
+		width: 275px;
+	}
+	100% {
+		width: 200px;
+	}
+}
+
+@keyframes stretching2 {
+	0% {
+		width: 385px;
+	}
+	100% {
+		width: 270px;
+	}
+}
+
+@keyframes transparence {
+	0% {
+		opacity: 0.05;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+
+body {
+	font-family: 'Open Sans', sans-serif;
+}
+.first {
+	background-color: #111111;
+	height: 700px;
+	padding: 40px;
+}
+.header {
+	text-transform: uppercase;
+	font-weight: bold;
+	.logo {
+		fo;nt-size: 24px
+		color: #ffffff;
+	}
+
+	a {
+		display: inline-block;
+		font-size: 14px;
+		margin-right: 20px;
+		margin-top: 17px;
+		color: #ffffff;
+		text-decoration: none;
+		&:hover {
+			border-bottom: 2px solid #fcac45;
+		}
+	}
+}
+
+	h1 {
+		animation-name: increase;
+		animation-delay: 1s;
+		animation-duration: 2s;
+		animation-fill-mode: both;
+	}
+	
+h1 {
+	text-align: center;
+	margin-top: 200px;
+	strong {
+		// font-size: 40px;
+		text-transform: uppercase;
+		display: block;	
+		font-weight: bold;
+		color: #fcac45;
+		span {
+			color: #505050;
+			font-weight: 400;
+		}
+	
+	}
+	.description {
+		margin-top: 20px;
+		font-size: 18px;
+		font-weight: 400;
+		color: #d5d5d5;	
+	}
+}
+	// вторая строка, О Нас + mac icon
+.about_us {
+	height: 600px;
+	background-color: #ffffff;
+	animation-name: transparence;
+	animation-duration: 3s;
+	animation-delay: 1s;
+	animation-fill-mode: both;
+	animation-timing-function: linear;
+	img {
+		vertical-align: middle;
+		margin-top: 90px;
+	}
+	h2 {
+		margin-top: 120px;
+		text-transform: uppercase;
+		font-size: 32px;
+		border-bottom: 4px solid #fcac45;
+		text-align: left;
+		padding: 10px;
+		width: 90%;
+		margin-bottom: 35px;
+		span {
+			font-weight: bold;
+		}
+		
+	}
+	p {
+			font-size: 16px;
+			font-weight: 300;
+			color: #777777;
+		}
+		.list {
+			margin-top: 35px;
+			color: #777777;
+			.skills {
+				font-size: 18px;
+				font-weight: bold;
+				color: #5a5a5a;
+			}
+			.opis {
+				font-style: italic;
+			}
+			li {
+				list-style-type: none;
+			}
+			li::before {
+				content: "";
+				width: 5px;
+				height: 5px;
+				background-color: #5a5a5a;
+				display: inline-block;
+				border-radius: 50%;
+				position: relative;
+				right: 10px;
+				bottom: 4px;
+				// outline: 3px solid #cecece;
+				// outline-offset: 4px;
+				// outline-style: groove;
+			}
+			.circle {
+				display: inline-block;
+				width: 15px;
+				height: 15px;
+				border: 2px solid #5a5a5a;
+				border-radius: 50%;
+				position: relative;
+				right: 15px;
+				top: 27px;
+			}
+		}
+}
+
+// our team
+.team {
+	background-color: #070707;
+	height: 680px;
+	h2 {
+		text-align: center;
+		font-size: 42px;
+		color: #ffffff;
+		font-weight: 600;
+		text-transform: uppercase;
+		border-bottom: 3px solid #bb8034;
+		padding: 25px;
+		margin-top: 60px;
+		// height: 50px;
+	
+	&::before, &::after {
+		content: '';
+		display: inline-block;
+		background-color: #070707;
+		width: 130px;
+		height: 5px;
+		position: absolute;
+		top: 159px;
+		}
+		&::before {
+			left: 5px;
+		}
+		&::after {
+			right: 5px;
+		}
+	}
+	.fourth {
+		text-align: center;
+		margin-top: 100px;
+	img {
+		width: 120px;
+		height: 120px;
+		border-radius: 100%;
+	}
+	h3 {
+		font-size: 20px;
+		font-weight: bold;
+		color: #fff;
+		margin-top: 20px;
+	}
+	.profession {
+		display: inline-block;
+		font-size: 16px;
+		color: #fff;
+		margin-top: 0px;
+		.seo {
+			text-transform: uppercase;
+		}
+	}
+	.slogan {
+		font-size: 14px;
+		color: #fff;
+		margin-top: 30px;
+	}
+}
+}
+
+// Наши сервисы
+.services {
+	background-color: #fff;
+	height: 720px;
+	h2 {
+		font-size: 40px;
+		color: #222222;
+		font-weight: bold;
+		text-transform: uppercase;
+		margin-top: 50px;
+		padding: 25px;
+		text-align: center;
+		border-bottom: 4px solid #fcac45;
+		&::before, &::after {
+		content: '';
+		display: inline-block;
+		background-color: #ffffff;
+		width: 135px;
+		height: 5px;
+		position: absolute;
+		top: 147px;
+		}
+		&::before {
+			left: 15px;
+		}
+		&::after {
+			right: 5px;
+		}
+	}
+	.services_description {
+		font-size: 15px;
+		font-style: italic;
+		color: #9b9b9b;
+		margin-top: 50px;
+		text-align: center;
+	}
+	.icon {
+		text-align: center;
+		margin-top: 100px;
+		.circle {
+			display: inline-block;
+			width: 110px;
+			height: 110px;
+			border: 5px solid #fcac45;
+			border-radius: 50%;
+			line-height: 95px;
+		}
+		h3 {
+			font-size: 25px;
+			font-weight: bold;
+			text-transform: uppercase;
+			color: #222222;
+			margin-top: 20px;
+		}
+		p {
+			font-size: 14px;
+			color: #222222;
+			margin-top: 15px;
+		}
+	}
+}
+
+// Наши клиенты
+.clients {
+	height: 500px;
+	background-color: #0b0b0b;
+	h2 {
+		text-align: center;
+		font-size: 44px;
+		color: #FFF;
+		text-transform: uppercase;
+		margin-top: 50px;
+		padding: 25px;
+		border-bottom: 4px solid #fcac45;
+				&::before, &::after {
+		content: '';
+		display: inline-block;
+		background-color: #0b0b0b;
+		// width: 275px;
+		height: 5px;
+		position: absolute;
+		top: 151px;
+		}
+		&::before, &::after {
+			animation-name: stretching;
+			animation-duration: 1.5s;
+			animation-delay: 1s;
+			animation-fill-mode: both;
+			animation-timing-function: linear;
+		}
+		&::before {
+			left: 15px;
+		}
+		&::after {
+			right: 15px;
+		}
+	}
+	.shop {
+		display: inline-block;
+		margin-top: 100px;
+		text-align: center;
+	}
+}
+
+
+// взгляните на наши работы
+.our_work {
+		height: 1300px;		
+		background-color: #fff;
+	h2 {
+		font-size: 44px;
+		color: #222222;
+		text-transform: uppercase;
+		margin-top: 50px;
+		text-align: center;
+		border-bottom: 4px solid #fcac45;
+		padding: 25px;
+		.work {
+			font-weight: bold;
+		}
+		&::before, &::after {
+		content: '';
+		display: inline-block;
+		background-color: #fff;
+		// width: 275px;
+		height: 5px;
+		position: absolute;
+		top: 151px;
+		}
+		&::before, &::after {
+			animation-name: stretching2;
+			animation-duration: 1.5s;
+			animation-delay: 1s;
+			animation-fill-mode: both;
+			animation-timing-function: linear;
+		}
+		&::before {
+			left: 15px;
+		}
+		&::after {
+			right: 15px;
+		}
+	}
+	p {
+		font-size: 15px;
+		font-style: italic;
+		margin-top: 50px;
+		text-align: center;
+		color: #6c6c6c;
+	}
+	.work_img {
+		display: inline-block;
+		text-align: center;
+		margin-top: 150px;
+	}
+	img {
+		padding-bottom: 25px;
+	}
+}
+
+// Отзывы наших клиентов
+.our_testimonials {
+	background-color: #0b0b0b;
+	height: 530px;
+	h2 {
+		color: #fff;
+		font-weight: bold;
+		font-size: 40px;
+		text-transform: uppercase;
+		margin-top: 60px;
+		text-align: center;
+		border-bottom: 4px solid #fcac45;
+		padding: 20px;
+		&::before, &::after {
+		content: '';
+		display: inline-block;
+		background-color: #0b0b0b;
+		width: 310px;
+		height: 5px;
+		position: absolute;
+		top: 147px;
+		}
+		&::before {
+			left: 15px;
+		}
+		&::after {
+			right: 15px;
+		}
+	}
+	.testimonials {
+		font-size: 18px;
+		color: #e7e7e7;
+		text-transform: uppercase;
+		margin-top: 100px;
+		text-align: center;
+	}
+	.name {
+		margin-top: 50px;
+		color: #787878;
+		font-size: 18px;
+		text-align: center;
+	}
+	
+}
+
+//Ннаши контакты
+.contacts {
+	background-color: #ffffff;
+	height: 800px;
+	h2 {
+		font-size: 40px;
+		text-transform: uppercase;
+		color: 222222;
+		font-weight: bold;
+		margin-top: 60px;
+		text-align: center;
+		border-bottom: 4px solid #fcac45;
+		padding: 20px;
+		&::before, &::after {
+		content: '';
+		display: inline-block;
+		background-color: #fff;
+		width: 110px;
+		height: 5px;
+		position: absolute;
+		top: 148px;
+	}
+	&::before {
+			left: 15px;
+		}
+		&::after {
+			right: 15px;
+		}
+}
+p {
+	font-size: 14px;
+	text-align: center;
+	font-style: italic;
+	color: #a6a6a6;
+	margin-top: 50px;
+}
+// Форма контактов
+&_form {
+	background-color: #fff;
+	margin-top: 60px;
+	span {
+		color: #db0000;
+	}
+	label {
+		margin-top: 30px;
+	}
+	.massage {
+		height: 150px;
+	}
+	&_input {
+		display: inline-block;
+		width: 100%;
+		border: 1px solid #999999;
+		padding: 4px;
+	}
+	&_btn {
+		width: 100%;
+		padding: 10px;
+		background-color: #fcac45;
+		margin-top: 32px;
+		color: #fef0e2;
+		border: none;
+	}
+}
+}
+
+// подвал
+.footer {
+	height: 80px;
+	background-color: #222222;
+	text-align: center;
+	img {
+		padding: 20px 5px;
+	}
+}
