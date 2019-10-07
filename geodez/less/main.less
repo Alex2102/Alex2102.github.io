@@ -1,0 +1,345 @@
+/*Colors*/
+
+
+
+
+body {
+	font-size: 10px;
+	box-sizing: border-box;
+}
+
+//фон 
+body {
+	background-image: url(../img/sloi1.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	//height: 60%;
+	//background-size: 100% 80vh;
+}
+
+
+//шапка сайта
+header {
+	display: flex;
+	//position: relative;
+	margin-top: 40px;
+	width: 100%;
+	height: 80px;
+	background-color: #898989;
+	.header-logo {
+		display: inline-block;
+		//border: 2px solid red;
+		//width: 25%;
+		img {
+			height: 60px;
+			width: 60px;
+			//margin-left: 30px;
+			margin: 10px 10px 10px 30px;
+		}
+		
+		p {
+			display: inline-block;
+			width: 120px;
+			//border: 2px solid red;
+			color: #000000;
+			font-family: "Proxima Nova - Black", sans-serif;
+			font-size: 1.2rem;
+			font-weight: 400;
+			line-height: 20px;
+			vertical-align: middle;
+			margin: auto;
+			span {
+				display: block;
+				font-size: 1.5rem;
+				letter-spacing: -1px;
+				font-weight: 900;
+			}
+		}
+	}
+
+	//навигация 
+	.header-nav {
+		width: 60%;
+		margin: auto;
+		display: flex;
+		justify-content: space-around;
+
+		a {
+			color: #0c0c0c;
+			text-decoration: none;
+			font-size: 1.4rem;
+		}
+	}
+
+	//контакты шапки
+	.header-contacts {
+		display: inline-block;
+		//width: 150px;
+		//border: 2px solid red;
+		p {
+			display: inline-block;
+			font-size: 0.7rem;
+			font-weight: 300;
+			margin-bottom: -2px;
+			vertical-align: middle;
+			text-align: center;
+			font-family: "Proxima Nova", sans-serif;
+			color: #0c0c0c;
+			//line-height: 10px;
+
+			span {
+				font-size: 0.8rem;
+			}
+		}
+	}
+
+	.header-icon {
+		display: inline-block;
+		//border: 2px solid black;
+		margin-right: 30px;
+		margin-left: auto;
+
+		img {
+			//display: flex;
+			width: 23px;
+			height: 30px;
+			margin-top: 5px;
+			 margin-left: 10px;
+		}
+	}
+	
+	.div {
+		display: flex;
+		margin: auto;
+		//display: inline-block;
+		//margin-right: 0rem;
+		//margin-left: auto;
+
+	}
+	}
+
+
+// описываем действия если разрешение меньше 1090px
+@media (max-width: 1090px) {
+	header {
+		//прячем контакты
+		.header {
+			&-contacts {
+				display: none;
+			}
+		//показваем контакты при клике на иконки	
+			&-contacts-active {
+				display: inline-block;
+			}
+		//прячем иконки при клике на них	
+			&-icon-active {
+				display: none;
+			}
+		// при клике на иконки убираем отступ у логотипа
+			&-logo-active img {
+				margin-left: 5px;
+			}
+		}
+	}
+}
+
+
+// описываем действия если разрешение меньше 852px
+@media (max-width: 852px) {
+	header {
+		//прячем контакты
+		.header {
+			&-contacts {
+				display: none;
+			}
+		//показваем контакты при клике на иконки	
+			&-contacts-active {
+				display: inline-block;
+			}
+		//прячем иконки при клике на них	
+			&-icon-active {
+				display: none;
+			}
+		// при клике на иконки убираем отступ у логотипа
+			&-logo-active img {
+				margin-left: 5px;
+			}
+		
+
+		&-logo {
+			display: flex;
+			margin: auto;
+			//margin-left: 10px;
+			img {
+				height: 50px;
+				width: 50px;
+				//margin: 10px;
+				margin-left: 0;
+			}
+
+			p {
+				width: 120px;
+				font-size: 1rem;
+				line-height: 15px;
+
+				span {
+					font-size: 1.3rem;
+				}
+			}
+		}
+
+		&-nav {
+			//border: 2px solid red;
+			a {
+				font-size: 1.1rem;
+			}
+		}
+
+		&-contacts {
+
+			p {
+				font-size: 0.6rem;
+
+				span {
+					font-size: 0.7rem;
+				}
+			}
+		}
+
+		&-icon {
+			margin-right: 10px;
+
+			img {
+				width: 21px;
+				height: 28px;
+			}
+		}
+	}
+	}
+}
+
+
+// действия для резрешения меньше 694px
+@media (max-width: 694px) {  //694
+	header {
+		margin-top: 0;
+		position: relative;
+		.header {
+
+			&-logo {
+				//margin-left: 150px;
+			}
+
+			&-nav {
+			display: none;
+			transition: 0.5s;
+			transform-origin: left center;
+			transform: scaleX(0) translateX(20%);
+			opacity: 0;
+
+			&-active {
+				transform: scaleX(1) translateX(0%);
+				opacity: 1;
+			}
+			//transform-origin: right center;
+			//margin-top: 80px;
+			//display: flex;
+			//justify-content: center;
+			//-ms-align-items: center;
+			//align-items: center;
+			
+			&-button {
+				position: absolute;
+				display: block;
+				width: 50px;
+				height: 50px;
+				background-color: #fff;
+				border-radius: 50%;
+				top: 80px;
+				left: 5px;
+				//border: 2px solid red;
+				//margin-left: 10px;
+					
+				span,
+				span::before,
+				span::after {
+					position: absolute;
+					top: 50%;
+					margin-top: -1px;
+					left: 50%;
+					margin-left: -10px;
+					width: 20px;
+					height: 2px;
+					background-color: #222;
+				}
+
+				span::before,
+				span::after {
+					content: '';
+					display: block;
+					transition: 0.2s;
+					transform-origin: right center;
+				}
+
+				span::before {
+					//top: 8px;
+					transform: translateY(-6px);
+				}
+
+				span::after {
+					//top: -6px;
+					transform: translateY(6px);
+				}
+
+				//поведение активной кнопки меню
+				&-active span::before {
+					transform: rotate(45deg);
+					top: 8px;
+					margin-left: -12px;
+				}
+
+				&-active span::after {
+					transform: rotate(-45deg);
+					top: -6px;
+					margin-left: -12px;
+				}
+
+				&-active span {
+					height: 0;
+				}
+
+			}
+
+			&-active {
+			display: inline-block;
+			position: absolute;
+			background-color: #fff; 
+			height: 50px;
+			top: 80px;
+			left: 14px;
+			//border: 2px solid red;
+			border-top-left-radius: 50px;
+			border-bottom-left-radius: 50px;
+			width: 100%;
+			a {
+				display: inline-block;
+				//text-decoration: none;
+				color: ##898989;
+				margin-right: 10px;
+				//margin-top: 10px;
+				//vertical-align: bottom;
+				position: relative;
+				top: 10px;
+				left: 40px;
+			}
+		}
+		}
+
+		&-contacts {
+			display: inline-block;
+		}
+
+		}
+	}
+}
+
